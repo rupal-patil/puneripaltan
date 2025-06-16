@@ -43,9 +43,6 @@ npm run dev
 Visit http://localhost:3000 in your browser to view the app.
 
 📂 Project Structure
-php
-Copy
-Edit
 puneripaltan/
 ├── app/                  # App routes and pages
 ├── public/               # Public assets (images, icons, etc.)
