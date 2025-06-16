@@ -1,6 +1,6 @@
 # Puneri Paltan Website 🏉
 
-This is a web project built using [Next.js](https://nextjs.org), styled with Tailwind CSS, and deployed on [Vercel](https://vercel.com). It showcases the players, fixtures, standings, gallery, and more related to the **Puneri Paltan** kabaddi team.
+This is a web project built using [Next.js](https://nextjs.org), styled with Tailwind CSS, and deployed on [Vercel](https://vercel.com). It showcases the players, gallery, and more related to the **Puneri Paltan** kabaddi team.
 
 ## 🚀 Live Site
 
