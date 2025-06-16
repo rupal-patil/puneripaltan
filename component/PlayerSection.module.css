@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'LoveNature';
+    src: url("/LoveNature.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.titleBox{
+    animation-name: fadeInLeft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+.titleBox h3{
+    margin-top: 110px;
+    margin-bottom: 60px;
+    letter-spacing: 3px;
+    background-color: #f40;
+    position: relative;
+    padding: 14px 30px;
+    margin-left: -12px;
+    width: 550px;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    text-align: right;
+    transform: skew(-15deg);
+}
+.titleBox h3::before{
+    content: '';
+    background-color: #f40;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 10px;
+    height: 73px;
+}
+.titleBox h3::after{
+    content: '';
+    background-color: #f40;
+    position: absolute;
+    right: -36px;
+    top: 0;
+    width: 7px;
+    height: 73px;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    50% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@media (max-width:667px) {
+    .titleBox h3{
+        width: 320px;
+        font-size: 20px;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .titleBox h3::before ,.titleBox h3::after{
+        height: 71px;
+    }
+}

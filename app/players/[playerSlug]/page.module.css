@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'LoveNature';
+    src: url("/LoveNature.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.font{
+    font-family: 'LoveNature',sans-serif;}
+.desknone{
+    display: none;
+}
+.h4{
+    animation-name: growIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes growIn {
+    0% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@media (max-width: 667px) {
+    .deskblock {
+        display: none !important;
+    }
+    .desknone {
+        display: block !important;
+    }
+}

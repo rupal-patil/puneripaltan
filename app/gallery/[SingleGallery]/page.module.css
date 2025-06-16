@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'LoveNature';
+    src: url("/LoveNature.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.box1{
+    margin-right: -80px;
+}
+.box1 h1{
+    text-align: center;
+    font-family: 'LoveNature',sans-serif;
+    color: white;
+    letter-spacing: 16px;
+    transform: translateX(-50%);
+    text-shadow: -2px 0 24px #000;
+    line-height: 110%;
+}
+.text{
+    font-family: 'LoveNature',sans-serif;
+    line-height: 110%;
+}
+.img{
+    animation: swing-bottom-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.box{
+    position: relative;
+}
+.customprevarrow,
+.customnextarrow {
+    width: 45px;
+    height: 35px;
+    position: absolute;
+    top: -320%;
+    transform: translateY(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.511);
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customprevarrow {
+  right: 30px;
+}
+
+.customnextarrow {
+  left: 30px;
+}
+  
+@keyframes swing-bottom-bck {
+    0% {
+     
+              transform: rotateX(-180deg);
+     
+              transform-origin: top;
+    }
+    100% {
+      
+              transform: rotateX(0deg);
+      
+              transform-origin: top;
+    }
+  }
+  
+@media (max-width:1024px) {
+   
+    .customnextarrow , .customprevarrow{
+        top: -408%;
+    }
+    .customprevarrow{
+        right: 3px;
+    }
+    .customnextarrow{
+        left:1px;
+    }
+}
+@media (max-width:667px) {
+    .box2{
+        display: none;
+    }
+    .customnextarrow , .customprevarrow{
+        top: -245%;
+    }
+    .customprevarrow{
+        right: 3px;
+    }
+    .customnextarrow{
+        left:1px;
+    }
+}
+

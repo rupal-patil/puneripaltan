@@ -1,0 +1,24 @@
+.button{
+    background: linear-gradient(to right, #df3100 0, #ff7500 100%);
+    letter-spacing: 3px;
+    border: 0;
+    /* padding: 8px 30px; */
+    /* width: 280px; */
+    border-radius: 0;
+    font-size: 20px;
+    color: white;
+    font-family: "Exo-SemiBold";
+    position: relative;
+    z-index: 999;
+    transform: skew(-15deg);
+    background-image: linear-gradient(to right, #df3100 0, #ff7500 25%, white 50%, #ff7500 75%, #df3100 100%);
+    background-size: 300% 100%;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+.button:hover{
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+    color: white;
+    text-decoration: none;
+}

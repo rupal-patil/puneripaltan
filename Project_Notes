@@ -1,0 +1,7 @@
+Redux toolkit
+1. create store folder
+2. create utils and actions folder inside store folder
+3. create axiosinterceptor.js file inside utils folder and place base url inside it
+4. create actions file for require component and fetch the api using axiosinterceptor
+5. create slice using createSlice and add the cases
+6. create store.js

@@ -1,0 +1,32 @@
+.button{
+    background: #ff7500;
+    border: 2px solid #fff;
+    width: 225px;
+    border-left: 0;
+    padding: 8px 30px;
+    border-radius: 0;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    z-index: 999;
+    letter-spacing: 3px;
+    transform: skew(-15deg) !important;
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    cursor: pointer;
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+        
+    }
+    50% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

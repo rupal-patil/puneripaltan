@@ -1,0 +1,39 @@
+.titleBand{
+    background-color: #f40;
+    position: relative;
+    padding: 7px 50px;
+    margin-left: -12px;
+    width: 85%;
+    font-family: "Exo-Regular";
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    display: -webkit-box;
+    line-height: 1.3;
+    /* text-overflow: ellipsis; */
+    height: 3em;
+    transform: skew(-15deg);
+    letter-spacing: 3px;
+}
+.titleBand::before{
+    content: '';
+    background-color: #f40;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 10px;
+    height: 3.5rem;
+}
+.titleBand::after{
+    content: '';
+    background-color: #f40;
+    position: absolute;
+    right: -36px;
+    top: 0;
+    width: 7px;
+    height: 3.5rem;
+}
