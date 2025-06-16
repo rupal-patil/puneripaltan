@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import classes from './Header.module.css';
 import { useState, useEffect } from 'react';

@@ -1,15 +1,14 @@
-"use client"
+/* eslint-disable @next/next/no-img-element */
+"use client";
 import { useState, useEffect } from "react";
 import axiosHttp from "@/lib/utils/axiosinterceptor";
 import PlayerSection from "@/component/PlayerSection";
-import PlayerList from "@/component/PlayerList"; // Import the PlayerList component
-// import { useRouter } from "next/navigation";
+import PlayerList from "@/component/PlayerList";
 import Link from "next/link";
 import VanillaTilt from "vanilla-tilt";
 import classes from "./page.module.css";
 
 const Players = () => {
-  // const router = useRouter();
   const [categories, setCategories] = useState([]);
   const [playersData, setPlayersData] = useState({
     raiders: [],
@@ -51,38 +50,24 @@ const Players = () => {
     }
   };
 
+  // Fetch categories on mount
   useEffect(() => {
-    fetchCategories(); // Fetch categories when the component mounts
+    fetchCategories();
   }, []);
 
+  // Fetch players once categories are loaded
   useEffect(() => {
-    if (categories.length) {
-      categories.forEach((category) => {
-        const categoryName = category.cat_name.toLowerCase();
-        fetchPlayers(category.id, categoryName);
-      });
-    }
-  }, [categories]);
+    if (!categories.length) return;
 
-  // const handlePlayerClick = (id) => {
-  //   // Navigate to the single player page using the player ID
-  //   router.push(`/players/${id}`);  // Use player ID in the URL instead of the name
-  // };
+    categories.forEach((category) => {
+      const normalizedName = category.cat_name.toLowerCase().replace(/\s+/g, '');
+      fetchPlayers(category.id, normalizedName);
+    });
+  }, [categories]);
 
   if (error) {
     return <div>Error: {error}</div>;
   }
-
-  // console.log(playersData.allRounders)
-  useEffect(() => {
-    if (categories.length) {
-      categories.forEach((category) => {
-        const normalizedName = category.cat_name.toLowerCase().replace(/\s+/g, ''); // <-- normalize!
-        fetchPlayers(category.id, normalizedName);
-      });
-    }
-  }, [categories]);
- 
 
   return (
     <>
@@ -92,11 +77,11 @@ const Players = () => {
         <div className={`container mx-auto ${classes.container}`}>
           <div className={`${classes.row} flex`}>
             <div className={`${classes.boxOut1}`}>
-              <img className={`${classes.banner}`} src="/banner-title.png" />
+              <img className={`${classes.banner}`} src="/banner-title.png" alt="image here" />
               <h1>Players</h1>
             </div>
             <div className={`${classes.boxOut2}`}>
-              <img src="/players_right.png" className={`${classes.introPlayer}`} />
+              <img src="/players_right.png" className={`${classes.introPlayer}`} alt="image here" />
             </div>
           </div>
         </div>
@@ -114,7 +99,7 @@ const Players = () => {
 
       {/* Defenders Section */}
       <section className="overflow-hidden pb-[50px]" style={{ backgroundColor: "#fff" }}>
-        <PlayerSection bannerTitle="Defenders" bgColor={"fff"}/>
+        <PlayerSection bannerTitle="Defenders" bgColor={"fff"} />
         {loading.defenders ? (
           <div>Loading Defenders...</div>
         ) : (

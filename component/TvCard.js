@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
@@ -28,7 +29,7 @@ const TvCard=({id,title,url})=>{
     return(
         <>
         <div className="relative flex flex-col overflow-hidden">
-        <img src={`https://img.youtube.com/vi/${url}/hqdefault.jpg`} className="w-full"/>
+        <img src={`https://img.youtube.com/vi/${url}/hqdefault.jpg`} className="w-full" alt='Image here'/>
                     <h3 className={`${classes.titleBand} ${exo.className}`}>
                         {title ? title : "Title"}
                     </h3>

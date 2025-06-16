@@ -25,7 +25,7 @@ const PlayerCard = ({ player_fname, player_lname, title, src, pid }) => {
             </div>
             </div>
             <div>
-                <img src={src} className={classes.player_image}/>
+                <img src={src} className={classes.player_image} alt="image here"/>
             </div>
             </Link>
         </div>

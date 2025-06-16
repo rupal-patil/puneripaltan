@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import classes from "./CarouselPlayers.module.css"
 import { Exo } from "next/font/google";
 import Link from "next/link";
@@ -19,7 +20,7 @@ const CarouselPlayers=({src,fname,lname,type,name,id})=>{
             <Link href={`/players/${id}`} className="cursor-pointer">
                 <div className={`${classes.transform}`} >
                     <div className="relative transform scale-90 transition-all duration-[900ms] ease-in"> 
-                        <img src={src ? src : "/player.png"}/>
+                        <img src={src ? src : "/player.png"} alt="image here"/>
                     </div>
                 </div>
             </Link>

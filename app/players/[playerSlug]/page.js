@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useEffect, useState } from "react";
 import axiosHttp from "@/lib/utils/axiosinterceptor";
@@ -17,82 +18,84 @@ const exomed=Exo({
   subsets:["latin"],
   weight:"500"
 })
+
+const additionalData=[
+  {
+    id:1,
+    data:{
+      mobImg:"/mob-sanket-sawant.png",
+      deskImg:"/sanket-sawant.png"
+    }
+  },
+  {
+    id:2,
+    data:{
+      mobImg:"/mob-pankaj-mohite.png",
+      deskImg:"/pankaj-mohite.png"
+    }
+  },
+  {
+    id:3,
+    data:{
+      mobImg:"/mob-mohit-goyat.png",
+      deskImg:"/mohit-goyat.png"
+    }
+  },
+  {
+    id:4,
+    data:{
+      mobImg:"/mob-akash-shinde.png",
+      deskImg:"/akash-shinde.png"
+    }
+  },
+  {
+    id:5,
+    data:{
+      mobImg:"/mob-aditya-shinde.png",
+      deskImg:"/aditya-shinde.png"
+    }
+  },
+  {
+    id:6,
+    data:{
+      mobImg:"/mob-abhinesh-nadarajan.png",
+      deskImg:"/abhinesh-nadarajan.png"
+    }
+  },
+  {
+    id:7,
+    data:{
+      mobImg:"/mob-gaurav-khatri.png",
+      deskImg:"/gaurav-khatri.png"
+    }
+  },
+  {
+    id:8,
+    data:{
+      mobImg:"/mob-badal-singh.png",
+      deskImg:"/badal-singh.png"
+    }
+  },
+  {
+    id:9,
+    data:{
+      mobImg:"/mob-aslam-inamdar.png",
+      deskImg:"/aslam-inamdar.png"
+    }
+  },
+  {
+    id:10,
+    data:{
+      mobImg:"/mob-mc.png",
+      deskImg:"/mc.png"
+    }
+  },
+]
 const SinglePlayer = () => {
 const params=useParams();
 const playerSlug=params.playerSlug;
   const[player,setPlayerData]=useState(null);
-  const additionalData=[
-    {
-      id:1,
-      data:{
-        mobImg:"/mob-sanket-sawant.png",
-        deskImg:"/sanket-sawant.png"
-      }
-    },
-    {
-      id:2,
-      data:{
-        mobImg:"/mob-pankaj-mohite.png",
-        deskImg:"/pankaj-mohite.png"
-      }
-    },
-    {
-      id:3,
-      data:{
-        mobImg:"/mob-mohit-goyat.png",
-        deskImg:"/mohit-goyat.png"
-      }
-    },
-    {
-      id:4,
-      data:{
-        mobImg:"/mob-akash-shinde.png",
-        deskImg:"/akash-shinde.png"
-      }
-    },
-    {
-      id:5,
-      data:{
-        mobImg:"/mob-aditya-shinde.png",
-        deskImg:"/aditya-shinde.png"
-      }
-    },
-    {
-      id:6,
-      data:{
-        mobImg:"/mob-abhinesh-nadarajan.png",
-        deskImg:"/abhinesh-nadarajan.png"
-      }
-    },
-    {
-      id:7,
-      data:{
-        mobImg:"/mob-gaurav-khatri.png",
-        deskImg:"/gaurav-khatri.png"
-      }
-    },
-    {
-      id:8,
-      data:{
-        mobImg:"/mob-badal-singh.png",
-        deskImg:"/badal-singh.png"
-      }
-    },
-    {
-      id:9,
-      data:{
-        mobImg:"/mob-aslam-inamdar.png",
-        deskImg:"/aslam-inamdar.png"
-      }
-    },
-    {
-      id:10,
-      data:{
-        mobImg:"/mob-mc.png",
-        deskImg:"/mc.png"
-      }
-    },
-  ]
+ 
   useEffect(()=>{
     const fetch=async ()=>{
       const response=await axiosHttp.get(`/single_player?id=${playerSlug}`);
@@ -127,14 +130,14 @@ const playerSlug=params.playerSlug;
         {/* Use the data only when it's available */}
         <section>
         <div>
-                <img src={player.additionalData.deskImg} width={"100%"} className={`${classes.deskblock}`} />
-                <img src={player.additionalData.mobImg} width={"100%"} className={`${classes.desknone}`} />
+                <img src={player.additionalData.deskImg} width={"100%"} className={`${classes.deskblock}`} alt="image here" />
+                <img src={player.additionalData.mobImg} width={"100%"} className={`${classes.desknone}`} alt="image here" />
             </div>
         </section>
         <section className="mx-auto py-[50px] bg-[url('/singleplayerW.jpg')] bg-cover bg-center">
           <div className="container mx-auto flex flex-col sm:flex-row w-[80%] sm:w-full md:flex-col lg:flex-row ">
             <div className="w-full lg:w-[80%] ">
-              <img src={player.full_image} className="h-[700px] block mx-auto"/>
+              <img src={player.full_image} className="h-[700px] block mx-auto" alt="image here"/>
             </div>
             <div className="flex flex-col w-full">
               <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row justify-center">

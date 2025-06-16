@@ -1,4 +1,5 @@
 // app/gallery-page.js
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState, useEffect } from "react";
 import axiosHttp from "@/lib/utils/axiosinterceptor";
@@ -38,7 +39,7 @@ const GalleryPage = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [activeSeason]);
 
   useEffect(() => {
     // Fetch gallery data when activeSeasonSlug changes
@@ -59,11 +60,11 @@ const GalleryPage = () => {
         <div className={`container mx-auto h-full overflow-hidden`}>
           <div className="flex w-full h-full items-center">
             <div className={`w-[100%] h-full relative`}>
-              <img src="/banner-title.png" className="w-[75%] absolute top-60 left-40" />
+              <img alt="image here" src="/banner-title.png" className="w-[75%] absolute top-60 left-40" />
               <h1 className={`w-full absolute top-[41%] left-[10%] text-white text-[40px] md:text-[90px] lg:text-[120px] tracking-[16px] ${classes.text}`}>Gallery</h1>
             </div>
             <div className={`relative w-full h-full`}>
-              <img src="/puneri-gallery-desk-banner-right.png" className="absolute w-full scale-102 items-end object-right top-65 left-20 bottom-0 " />
+              <img alt="image here" src="/puneri-gallery-desk-banner-right.png" className="absolute w-full scale-102 items-end object-right top-65 left-20 bottom-0 " />
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { FaFacebookF, FaTwitter, FaInstagram,FaYoutube } from "react-icons/fa";
 import classes from "./Footer.module.css"
 import Image from "next/image";
@@ -35,7 +36,7 @@ const Footer=()=>{
                                 <p className={`${lato.className}`}>Managed</p>
                                 <p className={`${lato.className}`}>By</p>
                             </div>
-                            <img src="/dl_logo.png" className={`${classes.img}`} style={{width:"120px !important"}}></img>
+                            <img src="/dl_logo.png" className={`${classes.img}`} style={{width:"120px !important"}} alt="image here"></img>
                         </div>
                     </a>
                 </div>

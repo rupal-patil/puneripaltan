@@ -1,4 +1,4 @@
-
+/* eslint-disable @next/next/no-img-element */
 import { Exo } from "next/font/google";
 import { useRef,useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
@@ -42,7 +42,7 @@ const Player=({src,fname,lname,type,onClick})=>{
             {/* <Link href={"#"}  className="cursor-pointer"> */}
                 <div className={`pb-[50px]`} >
                     <div className="transform scale-90 transition-all duration-[900ms] ease-in"> 
-                        <img src={src ? src : "/player.png"}/>
+                        <img src={src ? src : "/player.png"} alt="image here"/>
                     </div>
                     <div className="mt-[-25px] z-[9] text-center min-h-[105px]">
                         <h3 className={`text-black text-[35px] m-0 tracking-[4px] capitalize ${exoReg.className}`}>{fname ? fname : "FName"}</h3>

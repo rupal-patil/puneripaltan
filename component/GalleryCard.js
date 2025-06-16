@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import classes from "./GalleryCard.module.css"
 import { Exo } from "next/font/google";
 const exo=Exo({
@@ -18,7 +19,7 @@ const GalleryCard = ({src,title}) => {
         <div  className="overflow-hidden">
            
                 <div>
-                    <img src={src ? src : "/gallerycard.jpg"} className="w-full"/>
+                    <img src={src ? src : "/gallerycard.jpg"} className="w-full" alt="image here"/>
                     <h3 className={`${classes.titleBand} ${exo.className}`}>
                         {title ? title : "MATCH 22 - PUNERI PALTAN VS TAMIL THALAIVAS"}
                     </h3>
